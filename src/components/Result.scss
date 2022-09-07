@@ -1,0 +1,14 @@
+@use './../utils/variables.scss' as v;
+
+.result {
+  display: flex;
+  justify-content: right;
+  margin: 0 auto;
+  padding: 0.5rem 2rem 0 2rem;
+  background-color: v.$screen-background;
+  color: white;
+  max-width: 650px;
+  height: auto;
+  font-size: 2rem;
+  border-radius: 1rem;
+}

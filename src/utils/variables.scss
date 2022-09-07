@@ -1,0 +1,103 @@
+// Colors
+
+//// Theme 1
+
+// Backgrounds
+
+$main-background: hsl(222, 26%, 31%);
+$keypad-background: hsl(223, 31%, 20%);
+$screen-background: hsl(224, 36%, 15%);
+
+// Keys
+
+// Desaturated dark blue (key background):
+$blue: hsl(225, 21%, 49%);
+// Desaturated dark blue (key shadow):
+$darkblue: hsl(224, 28%, 35%);
+
+// Red (key background, toggle)
+$red: hsl(6, 63%, 50%);
+// Dark red (key shadow):
+$darkRed: hsl(6, 70%, 34%);
+
+// Light grayish orange (key background):
+$lightOrange: hsl(30, 25%, 89%);
+// Grayish orange (key shadow):
+$darkOrange: hsl(28, 16%, 65%);
+
+// Text
+
+// Very dark grayish blue:
+$textBlue: hsl(221, 14%, 31%);
+// White: hsl(0, 0, 100%)
+
+//// Theme 2
+
+// Backgrounds
+
+// Light gray (main background):
+$backgroundGrey: hsl(0, 0%, 90%);
+// Grayish red (toggle background, keypad background):
+$backgroundGreyRed: hsl(0, 5%, 81%);
+
+// Very light gray (screen background):
+$backgroundLightGrey: hsl(0, 0%, 93%);
+
+// Keys
+
+// Dark moderate cyan (key background):
+$modcyan: hsl(185, 42%, 37%);
+// Very dark cyan (key shadow):
+$darkmodcyan: hsl(185, 58%, 25%);
+
+// Orange (key background, toggle):
+$orange: hsl(25, 98%, 40%);
+// Dark orange (key shadow):
+$darkorange: hsl(25, 99%, 27%);
+
+// Light grayish yellow (key background):
+$yellow: hsl(45, 7%, 89%);
+// Dark grayish orange (key shadow):
+$darkyellow: hsl(35, 11%, 61%);
+
+// Text
+
+// Very dark grayish yellow:
+$abc: hsl(60, 10%, 19%);
+// White (text):
+$abc: hsl(0, 0, 100%);
+
+//// Theme 3
+
+// Backgrounds
+
+// Very dark violet (main background):
+$violet: hsl(268, 75%, 9%);
+// Very dark violet (toggle background, keypad background, screen background):
+$darkviolet: hsl(268, 71%, 12%);
+
+// Keys
+
+// Dark violet (key background):
+$keysviolet: hsl(281, 89%, 26%);
+// Vivid magenta (key shadow):
+$keysmagenta: hsl(285, 91%, 52%);
+
+// Pure cyan (key background, toggle):
+$cyan: hsl(176, 100%, 44%);
+// Soft cyan (key shadow):
+$softcyan: hsl(177, 92%, 70%);
+
+// Very dark violet (key background):
+$verydarkviolet: hsl(268, 47%, 21%);
+// Dark magenta (key shadow):
+$darkmagenta: hsl(290, 70%, 36%);
+
+// Text
+
+// Light yellow:
+$lightyellow: hsl(52, 100%, 62%);
+// Very dark blue:
+$verydarkblue: hsl(198, 20%, 13%);
+// White (text):
+$white: hsl(0, 0, 100%);
