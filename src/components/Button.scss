@@ -1,0 +1,15 @@
+@use './../utils/variables.scss' as v;
+
+button {
+  background-color: v.$lightOrange;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.reset {
+  background-color: aquamarine;
+}
+.equals {
+  background-color: v.$red;
+}

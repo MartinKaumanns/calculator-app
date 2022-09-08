@@ -12,15 +12,15 @@ const ColorToggleButton = () => {
   }); */
 
   return (
-    <div class="tri-state-toggle">
-      <button class="tri-state-toggle-button" id="toggle-button1"></button>
+    <div className="tri-state-toggle">
+      <button className="tri-state-toggle-button" id="toggle-button1"></button>
 
       <button
-        class="tri-state-toggle-button active"
+        className="tri-state-toggle-button active"
         id="toggle-button2"
       ></button>
 
-      <button class="tri-state-toggle-button" id="toggle-button3"></button>
+      <button className="tri-state-toggle-button" id="toggle-button3"></button>
     </div>
   );
 };
