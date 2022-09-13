@@ -1,15 +1,27 @@
 @use './../utils/variables.scss' as v;
 
 button {
+  position: relative;
   background-color: v.$lightOrange;
   border: none;
   font-size: 3rem;
   cursor: pointer;
+  box-shadow: inset 0px -0.5rem v.$darkOrange;
+  transition: all 0.1s ease;
 }
 
 .reset {
-  background-color: aquamarine;
+  color: white;
+  background-color: v.$blue;
+  box-shadow: inset 0px -0.5rem v.$darkblue;
 }
 .equals {
+  color: white;
   background-color: v.$red;
+  box-shadow: inset 0px -0.5rem v.$darkRed;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(1px);
 }

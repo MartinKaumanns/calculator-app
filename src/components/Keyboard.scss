@@ -2,11 +2,12 @@
 
 .keyboard-wrapper {
   width: 100%;
-  height: calc(60% - 110px);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  height: calc(60% - 120px);
+  display: flex;
+  flex-wrap: wrap;
+  /*   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-end: 2fr;
+  */
   grid-gap: 1rem;
 }
 
@@ -16,6 +17,12 @@
   padding: 2rem;
   max-width: 650px;
   border-radius: 1rem;
+}
+
+.item {
+  flex-grow: 1;
+  width: calc(25% - 2rem);
+  border-radius: 0.8rem;
 }
 
 /* 

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './App.scss';
 import Button from './components/Button';
 import ColorToggleButton from './components/ColorToggleButton';
 import Keyboard from './components/Keyboard';
 import Result from './components/Result';
+import { ThemeContext } from './Theme';
 
 const btnValues = [
   [7, 8, 9, 'DEL'],
@@ -19,11 +20,15 @@ const toLocaleString = (num) =>
 const removeSpaces = (num) => num.toString().replace(/\s/g, '');
 
 const App = () => {
-  const [calculation, setCalculation] = useState({
+  const { theme } = useContext(ThemeContext);
+
+  let [calculation, setCalculation] = useState({
     sign: '',
     num: 0,
     res: 0
   });
+
+  // Calculation logic
 
   const numClickHandler = (event) => {
     event.preventDefault();
@@ -70,8 +75,8 @@ const App = () => {
   };
 
   const equalsClickHandler = () => {
-    if (calculation.sign && calculation.number) {
-      let math = (a, b, sign) =>
+    if (calculation.sign && calculation.num) {
+      const math = (a, b, sign) =>
         sign === '+'
           ? a + b
           : sign === '-'
@@ -87,16 +92,16 @@ const App = () => {
             ? "Can't divide with 0!"
             : toLocaleString(
                 math(
-                  Number(calculation.res),
-                  Number(calculation.num),
+                  Number(removeSpaces(calculation.res)),
+                  Number(removeSpaces(calculation.num)),
                   calculation.sign
                 )
               ),
         sign: '',
         num: 0
       });
+      console.log(calculation.num);
     }
-    console.log(calculation);
   };
 
   const resetClickHandler = () => {
@@ -108,16 +113,16 @@ const App = () => {
     });
   };
 
-  /*   const deleteClickHandler = () => {
+  const deleteClickHandler = () => {
     setCalculation({
       ...calculation,
 
       num: 0
     });
-  }; */
+  };
 
   return (
-    <div className="App main">
+    <div className={`App main ${theme}`}>
       <div className="logo">
         <h1>calc</h1>
         <div className="toggle">
@@ -132,20 +137,19 @@ const App = () => {
             <Button
               key={i}
               className={
-                btn === 'Reset'
-                  ? 'reset'
-                  : btn === '='
+                btn === '='
                   ? 'equals'
+                  : btn === 'Reset'
+                  ? 'reset'
                   : btn === 'DEL'
                   ? 'reset'
                   : ''
               }
               value={btn}
               onClick={
-                /*  btn === 'DEL'
+                btn === 'DEL'
                   ? deleteClickHandler
-                  :  */
-                btn === '='
+                  : btn === '='
                   ? equalsClickHandler
                   : btn === '/' || btn === '+' || btn === '-' || btn === 'x'
                   ? signClickHandler

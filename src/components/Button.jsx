@@ -3,7 +3,7 @@ import './Button.scss';
 
 const Button = ({ className, value, onClick }) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button className={`${className} + item`} onClick={onClick}>
       {value}
     </button>
   );
