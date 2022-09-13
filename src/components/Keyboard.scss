@@ -1,13 +1,9 @@
 @use './../utils/variables.scss' as v;
 
 .keyboard-wrapper {
-  width: 100%;
   height: calc(60% - 120px);
   display: flex;
   flex-wrap: wrap;
-  /*   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  */
   grid-gap: 1rem;
 }
 
@@ -18,57 +14,16 @@
   max-width: 650px;
   border-radius: 1rem;
 }
+@media (max-width: 375px) {
+  .keyboard-wrapper {
+    margin: 1.5rem;
+    grid-gap: 0.8rem;
+    height: calc(70% - 120px);
+  }
+}
 
 .item {
   flex-grow: 1;
   width: calc(25% - 2rem);
   border-radius: 0.8rem;
 }
-
-/* 
-.key-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  button {
-    background-color: v.$lightOrange;
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
-  }
-  .blue {
-    color: white;
-    background-color: v.$blue;
-    box-shadow: 0px 0.5rem v.$darkblue;
-  }
-}
-
-.key-last-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  button {
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
-  }
-  .blue {
-    color: white;
-    background-color: v.$blue;
-    box-shadow: 0px 0.5rem v.$darkblue;
-  }
-
-  .red {
-    color: white;
-    background-color: v.$red;
-    box-shadow: 0px 0.5rem v.$darkRed;
-  }
-}
-
-.btn {
-  margin: 1rem;
-  padding: 1.2rem 1rem 0.8rem 1rem;
-  border-radius: 0.8rem;
-  box-shadow: 0px 0.5rem v.$darkOrange;
-}
- */

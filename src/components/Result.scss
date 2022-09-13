@@ -12,3 +12,16 @@
   font-size: 2rem;
   border-radius: 1rem;
 }
+
+@media (max-width: 375px) {
+  .result {
+    margin: 1rem 1.5rem;
+    padding: 0.2 1.5rem 0 1.5rem;
+    background-color: v.$screen-background;
+    color: white;
+    max-width: 650px;
+    height: auto;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+  }
+}

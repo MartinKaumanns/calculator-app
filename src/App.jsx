@@ -117,7 +117,7 @@ const App = () => {
     setCalculation({
       ...calculation,
 
-      num: 0
+      num: calculation.num.slice(0, -1)
     });
   };
 
